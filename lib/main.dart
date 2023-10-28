@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:sahyogi/screens/tc_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,6 +17,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: TcLogin(),
     );
   }
@@ -32,15 +34,14 @@ class _GettingStartedState extends State<GettingStarted> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
               fit: BoxFit.fill,
-              image:AssetImage("assets/backgroundimages/gettingstarted.png")
-            ),
-            ),
-        ), 
-    );    
+              image: AssetImage("assets/backgroundimages/gettingstarted.png")),
+        ),
+      ),
+    );
   }
 }
 
@@ -55,37 +56,13 @@ class _PassengerLoginState extends State<PassengerLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
               fit: BoxFit.fill,
-              image:AssetImage("assets/backgroundimages/bluelogin.png")
-            ),
-            ),
-        ), 
-    );    
-  }
-}
-
-class TcLogin extends StatefulWidget {
-  const TcLogin({super.key});
-
-  @override
-  State<TcLogin> createState() => _TcLoginState();
-}
-
-class _TcLoginState extends State<TcLogin> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.fill,
-              image:AssetImage("assets/backgroundimages/yellowlogin.png")
-            ),
-            ),
-        ), 
-    );    
+              image: AssetImage("assets/backgroundimages/bluelogin.png")),
+        ),
+      ),
+    );
   }
 }
