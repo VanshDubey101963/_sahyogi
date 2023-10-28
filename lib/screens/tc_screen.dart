@@ -52,7 +52,7 @@ class _TcLoginState extends State<TcLogin> {
                     ),
                     ),
                 ]),
-            const SizedBox(height: 25.0),
+            const SizedBox(height: 70.0),
             const Padding(
               padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 8.0),
               child: Text(
@@ -76,6 +76,7 @@ class _TcLoginState extends State<TcLogin> {
               padding: const EdgeInsets.symmetric(horizontal: 150.0 , vertical: 25.0),
               child: ElevatedButton(
                 style: ButtonStyle(
+                  elevation: const MaterialStatePropertyAll(0.0),
                   backgroundColor: MaterialStateProperty.all(Colors.white54),
                 ),
                 onPressed: (){},
