@@ -30,8 +30,29 @@ class _TcLoginState extends State<TcLogin> {
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'TTE/TC',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25.0,
+                      color: Colors.black87
+                    ),
+                    ),
+                  Text(
+                    'LOGIN',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25.0,
+                      color: Colors.black87
+                    ),
+                    ),
+                ]),
+            const SizedBox(height: 25.0),
             const Padding(
               padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 8.0),
               child: Text(
@@ -50,7 +71,23 @@ class _TcLoginState extends State<TcLogin> {
                 style: TextStyle(color: Colors.black),
               ),
             ),
-            TcTextField(controller: _passwordController, icon: Icons.lock)
+            TcTextField(controller: _passwordController, icon: Icons.lock),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 150.0 , vertical: 25.0),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.white54),
+                ),
+                onPressed: (){},
+                child: const Text(
+                  'Login',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold
+                  ),
+                  )
+                ),
+            )
           ],
         ),
       ),
