@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:sahyogi/screens/passenger_login.dart';
+import 'package:sahyogi/screens/tc_screen.dart';
 
 class GettingStarted extends StatefulWidget {
   const GettingStarted({super.key});
-
+  static const String id = "/gettingstarted";
   @override
   State<GettingStarted> createState() => _GettingStartedState();
 }
@@ -65,7 +67,9 @@ class _GettingStartedState extends State<GettingStarted> {
                   Row(
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, PassengerLogin.id);
+                        },
                         style: const ButtonStyle(
                             elevation: MaterialStatePropertyAll(0.0),
                             backgroundColor:
@@ -77,7 +81,9 @@ class _GettingStartedState extends State<GettingStarted> {
                       ),
                       const SizedBox(width: 10.0),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, TcLogin.id);
+                        },
                         style: const ButtonStyle(
                           elevation: MaterialStatePropertyAll(0.0),
                           backgroundColor:

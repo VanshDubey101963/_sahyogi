@@ -3,7 +3,7 @@ import 'package:sahyogi/components/tc_textfield.dart';
 
 class TcLogin extends StatefulWidget {
   const TcLogin({super.key});
-
+  static const String id = "/tclogin";
   @override
   State<TcLogin> createState() => _TcLoginState();
 }
@@ -38,19 +38,17 @@ class _TcLoginState extends State<TcLogin> {
                   Text(
                     'TTE/TC',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25.0,
-                      color: Colors.black87
-                    ),
-                    ),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25.0,
+                        color: Colors.black87),
+                  ),
                   Text(
                     'LOGIN',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25.0,
-                      color: Colors.black87
-                    ),
-                    ),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25.0,
+                        color: Colors.black87),
+                  ),
                 ]),
             const SizedBox(height: 70.0),
             const Padding(
@@ -73,21 +71,19 @@ class _TcLoginState extends State<TcLogin> {
             ),
             TcTextField(controller: _passwordController, icon: Icons.lock),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 150.0 , vertical: 25.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 150.0, vertical: 25.0),
               child: ElevatedButton(
-                style: ButtonStyle(
-                  elevation: const MaterialStatePropertyAll(0.0),
-                  backgroundColor: MaterialStateProperty.all(Colors.white54),
-                ),
-                onPressed: (){},
-                child: const Text(
-                  'Login',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold
+                  style: ButtonStyle(
+                    elevation: const MaterialStatePropertyAll(0.0),
+                    backgroundColor: MaterialStateProperty.all(Colors.white54),
                   ),
-                  )
-                ),
+                  onPressed: () {},
+                  child: const Text(
+                    'Login',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  )),
             )
           ],
         ),

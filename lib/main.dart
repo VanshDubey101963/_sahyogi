@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-//import 'package:sahyogi/screens/passenger_login.dart';
+import 'package:sahyogi/screens/passenger_login.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
-//import 'package:sahyogi/screens/tc_screen.dart';
+import 'package:sahyogi/screens/tc_screen.dart';
 import 'package:sahyogi/screens/getting_started.dart';
 
 void main() async {
@@ -18,9 +18,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GettingStarted()
+      home: const GettingStarted(),
+      routes: {
+        GettingStarted.id :(context) => const  GettingStarted(),
+        PassengerLogin.id :(context) => const PassengerLogin(),
+        TcLogin.id :(context) => const TcLogin(),
+      }
     );
   }
 }
