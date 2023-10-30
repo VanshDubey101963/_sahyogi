@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sahyogi/screens/passenger_login.dart';
-import 'package:sahyogi/screens/tc_screen.dart';
+import 'package:sahyogi/screens/tc_login.dart';
 
 class GettingStarted extends StatefulWidget {
   const GettingStarted({super.key});
@@ -10,6 +10,7 @@ class GettingStarted extends StatefulWidget {
 }
 
 class _GettingStartedState extends State<GettingStarted> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
