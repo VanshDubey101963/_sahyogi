@@ -86,13 +86,14 @@ class _TcLoginState extends State<TcLogin> {
                     try {
                       await _firebaseAuth!
                           .signInWithEmailAndPassword(
-                              email: '${_idController!.text.toString()}@gmail.com',
+                              email:
+                                  '${_idController!.text.toString()}@gmail.com',
                               password: _passwordController!.text.toString())
                           .then((value) {
                         Navigator.pushNamed(context, TcScreen.id);
                       });
                     } catch (e) {
-                      print(e);
+                      throw Exception();
                     }
                   },
                   child: const Text(

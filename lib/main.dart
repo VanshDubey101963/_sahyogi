@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const GettingStarted(),
+        home: const PassengerScreen(),
         routes: {
           GettingStarted.id: (context) => const GettingStarted(),
           PassengerLogin.id: (context) => const PassengerLogin(),
